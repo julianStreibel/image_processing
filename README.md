@@ -11,7 +11,7 @@ First you have to install some dependencies.
 
 ```
 pip2 install tensorflow-gpu
-pip2 install tensorflow
+pip2 install tensorflow==1.14
 pip2 install --user numpy
 pip2 install --user imutils
 pip2 install --user opencv-python

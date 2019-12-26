@@ -35,7 +35,8 @@ python2 motion_detection.py
 ```
 
 ### Real Time Image Classification
-For real time image classification with a live position monetoring use this one:
+For real time image classification with a live position monetoring use this one.
+The used model is a [research model](https://github.com/tensorflow/models/tree/master/research/object_detection) from tensorflow and has 90 classes, but it is light enough to run on mobile devices.
 
 ![classification](https://techcrunch.com/wp-content/uploads/2017/06/image1.jpg)
 ```
@@ -45,3 +46,4 @@ python2 real_time_classification.py
 ## Author
 
 * **Julian Streibel** [julianstreibel](https://github.com/julianstreibl)
+

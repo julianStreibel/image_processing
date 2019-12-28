@@ -63,7 +63,7 @@ num_of_files = 0
 
 print
 print
-print("ON AIR")
+print("\033[91m ON AIR \033[0m")
 print
 print
 

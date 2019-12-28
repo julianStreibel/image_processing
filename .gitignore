@@ -1,2 +1,3 @@
 video_content/*.mp4
 *.pyc
+.DS_Store

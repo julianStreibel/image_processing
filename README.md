@@ -31,7 +31,8 @@ For motion detection via background subtraction use the following line and pay a
 python2 motion_detection.py
 ```
 
-For real time image classification with a live position monetoring use this one:
+For real time image classification with a live position monetoring use this one.
+In addition it saves a video file if a person enters the frame.
 
 ```
 python2 real_time_classification.py

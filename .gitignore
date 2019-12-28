@@ -1,2 +1,2 @@
-output11.mp4
-.DS_Store
+video_content/*.mp4
+*.pyc

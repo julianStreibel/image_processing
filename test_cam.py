@@ -1,17 +1,26 @@
+import numpy as np
 import cv2
 
-cv2.namedWindow("preview")
-vc = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
 
-if vc.isOpened():  # try to get the first frame
-    rval, frame = vc.read()
-else:
-    rval = False
+# Get the width and height of frame
+width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH) + 0.5)
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT) + 0.5)
 
-while rval:
-    cv2.imshow("preview", frame)
-    rval, frame = vc.read()
-    key = cv2.waitKey(20)
-    if key == 27:  # exit on ESC
+
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+out = cv2.VideoWriter('video_content/output.mp4', fourcc, 7.0, (width, height))
+
+while(cap.isOpened()):
+    ret, frame = cap.read()
+    if ret:
+        out.write(frame)
+        cv2.imshow('frame',frame)
+        if (cv2.waitKey(1) & 0xFF) == ord('q'): # q to exit
+            break
+    else:
         break
-cv2.destroyWindow("preview")
+
+out.release()
+cap.release()
+cv2.destroyAllWindows()

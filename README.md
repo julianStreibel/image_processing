@@ -43,8 +43,3 @@ In addition it saves a video file if a person enters the frame.
 ```
 python2 real_time_classification.py
 ```
-
-## Author
-
-* **Julian Streibel** [julianstreibel](https://github.com/julianstreibl)
-
